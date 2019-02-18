@@ -10,4 +10,8 @@ module Wordwrapper
     part + "\n" + wrap(str[part.length..-1].strip, max_len)
   end
 
+  def self.undo(str)
+    str.gsub! "\n", " "
+  end
+
 end

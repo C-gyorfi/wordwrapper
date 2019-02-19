@@ -44,5 +44,9 @@ RSpec.describe Wordwrapper do
       expect(Wordwrapper.undo("text\nthat\nwrap")).to eq("text that wrap")
     end
 
+    it "can unwrap wrapped text" do
+      expect(Wordwrapper.undo("a lot of\nwords for\na single\nline")).to eq("text that wrap")
+    end
+
   end
 end
